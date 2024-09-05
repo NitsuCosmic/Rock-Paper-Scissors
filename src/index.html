@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/25f57f2a99.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Rock Paper Scissors Game</title>
+	</head>
+	<body
+		class="bg-gradient-to-br from-slate-900 to-blue-950 p-2 min-h-screen flex items-center justify-center"
+	>
+		<main class="flex flex-col justify-center items-center gap-12 w-full">
+			<section
+				class="flex justify-between w-full p-2 border-2 rounded-xl border-neutral-100 md:max-w-[32rem]"
+			>
+				<h1 class="font-bold text-3xl text-white leading-none">
+					Rock<br />
+					Paper <br />
+					Scissors
+				</h1>
+				<div
+					class="flex flex-col justify-center items-center w-36 bg-white rounded-lg"
+				>
+					<h4 class="font-semibold leading-none">SCORE</h4>
+					<span id="score" class="font-bold text-[3rem] leading-none">0</span>
+				</div>
+			</section>
+			<section class="flex justify-center items-center">
+				<div class="grid grid-cols-2 grid-rows-2 gap-4">
+					<button
+						title="Rock"
+						id="btn-rock"
+						class="group mx-auto col-span-2 aspect-square bg-slate-900 text-white text-[4rem] rounded-full border-8 border-rose-600 p-4 md:p-6 lg:p-8 shadow-lg transition-all hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-950/80"
+					>
+						<i
+							class="fa-regular fa-hand-back-fist transition-colors group-hover:text-rose-600"
+						></i>
+					</button>
+					<button
+						title="Paper"
+						id="btn-paper"
+						class="group aspect-square bg-slate-900 text-white text-[4rem] rounded-full border-8 border-indigo-600 p-4 md:p-6 lg:p-8 shadow-lg transition-all hover:shadow-xl hover:shadow-slate-950/80"
+					>
+						<i
+							class="fa-regular fa-hand transition-colors group-hover:text-indigo-600"
+						></i>
+					</button>
+					<button
+						title="Scissors"
+						id="btn-scissors"
+						class="group aspect-square bg-slate-900 text-white text-[4rem] rounded-full border-8 border-fuchsia-600 p-4 md:p-6 lg:p-8 shadow-md transition-all hover:shadow-lg hover:shadow-slate-950"
+					>
+						<i
+							class="fa-regular fa-hand-scissors transition-colors group-hover:text-fuchsia-600"
+						></i>
+					</button>
+				</div>
+			</section>
+			<div class="text-center min-h-20">
+				<h2
+					id="result-text"
+					class="text-white text-3xl font-bold lg:text-4xl"
+				></h2>
+				<p id="election-text" class="text-lg text-neutral-200 lg:text-xl"></p>
+			</div>
+			<section
+				class="flex flex-col mx-auto w-full border-2 rounded-lg p-2 md:max-w-[32rem]"
+			>
+				<div class="flex justify-between text-white text-2xl font-semibold">
+					<h3>Wins:</h3>
+					<h3 id="wins-quantity">0</h3>
+				</div>
+				<div class="flex justify-between text-white text-2xl font-semibold">
+					<h3>Losses:</h3>
+					<h3 id="losses-quantity">0</h3>
+				</div>
+				<div class="flex justify-between text-white text-2xl font-semibold">
+					<h3>Ties:</h3>
+					<h3 id="ties-quantity">0</h3>
+				</div>
+				<button
+					id="reset-btn"
+					class="bg-white w-fit mx-auto px-2 py-1 text-xl rounded font-semibold transition-colors hover:bg-neutral-200"
+				>
+					Reset Score
+				</button>
+			</section>
+		</main>
+		<script src="../index.js"></script>
+	</body>
+</html>
